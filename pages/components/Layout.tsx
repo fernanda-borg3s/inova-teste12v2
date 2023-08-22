@@ -1,10 +1,13 @@
-import { Children, useState } from 'react';
+
+import React, { ReactNode, useState } from 'react';
 import { AppShell, Navbar, Header, useMantineTheme, Image, NavLink} from '@mantine/core';
 import { IconHome2, IconCalendarEvent, IconMessages, IconTools, IconSchool, IconFriends} from '@tabler/icons-react';
 import { User } from './_user';
 
-
-export default function Layout({ children }){
+interface LayoutProps {
+    children: ReactNode;
+  }
+export default function Layout({ children }: LayoutProps){
     const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
     return(
