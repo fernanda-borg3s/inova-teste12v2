@@ -2,7 +2,7 @@
 import React, { ReactNode, useState } from 'react';
 import { AppShell, Navbar, Header, useMantineTheme, Image, NavLink} from '@mantine/core';
 import { IconHome2, IconCalendarEvent, IconMessages, IconTools, IconSchool, IconFriends} from '@tabler/icons-react';
-import { User } from './_user';
+import User  from './_user';
 
 interface LayoutProps {
     children: ReactNode;

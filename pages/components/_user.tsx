@@ -2,7 +2,7 @@ import React from 'react';
 import { IconChevronRight, IconChevronLeft, IconSettings, IconBell, IconUserCircle} from '@tabler/icons-react';
 import { UnstyledButton, Group, Avatar, Text, Box, useMantineTheme, rem, Menu } from '@mantine/core';
 
-export function User() {
+export default function User() {
   const theme = useMantineTheme();
 
   return (
