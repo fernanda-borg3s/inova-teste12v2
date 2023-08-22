@@ -1,0 +1,82 @@
+/* Tabs detalhes */
+.containerDetails{
+    background-color: white;
+    width: 80%;
+    margin-top:30px;
+    padding: 10px;
+  
+}
+.infoDocente{
+    background-color: #004d2a;
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+.span{
+    color: rgb(0, 76, 255);
+}
+.nomeMat{
+    margin: 0;
+    padding-right: 50px ;
+}
+.infoSala{
+    padding-right: 164px;
+}
+.btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin: 20px 5px;
+}
+.btnEditarDetails{
+    background-color: #004d2a;
+    margin-right: 20px;
+    width: 20%;
+
+}
+.btnRemoveDetails{
+    background-color: #CD191E;
+    margin-left: 20px;
+    width: 20%;
+
+}
+.btnRemoveDetails:hover, .btnEditarDetails:hover{
+    background-color: grey;
+  opacity: 0.7;
+}
+/* Tabs incritos */
+.divSearch, .nomeMat, .dataHora, .infoSala{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 15px 0;
+}
+.inputSearch{
+    font-size: 17px;
+    border: 1px solid #004d2a;
+    border-right: none;
+    cursor: pointer;
+    padding: 5.6px 10px;
+    margin-bottom:10px;
+    outline: none;
+    background-color: transparent;
+}
+.btnIconSearch{
+    background-color: #004d2a;
+    height: 33px;
+    padding-bottom: 1.8px;
+    margin-left: -15px;
+    /* width: 20px; */
+}
+.btnPlanilha{
+    background-color: #004d2a;
+}
+.btnPlanilha:hover, .btnIconSearch:hover{
+    background-color:transparent;
+    color: #004d2a;
+    border: 1px solid #004d2a;
+    
+    
+}
