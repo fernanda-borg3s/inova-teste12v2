@@ -1,6 +1,6 @@
-import { Tabs } from '@mantine/core';
+ import { Tabs } from '@mantine/core';
 import { IconListDetails, IconChecklist  } from '@tabler/icons-react';
-import Inscritos from './incritos'
+import Inscritos from './tabsIncritos'
 import TabelaDetails from './tabsDetails';
 
 

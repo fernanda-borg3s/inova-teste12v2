@@ -10,16 +10,17 @@ export default function Cards(){
         <>
        
         <Flex mih={50} gap="sm" justify="flex-start" align="center" direction="row" wrap="wrap">
-        <Card shadow="sm" padding="lg" radius="md" withBorder>
+        <Card shadow="sm" padding="md" radius="md" withBorder>
 
           <Group position="apart" mt="md" mb="xs">
-            <Text weight={500}>Nome Usuário</Text>
+            <Text weight={500}>Encontro X</Text>
             <Tooltip label="Editar">
             <Badge size="lg" radius="xs" variant="outline"  rightSection={edit} style={{backgroundColor: '#004d2a'}}></Badge>
             </Tooltip>
           </Group>
-    
-          <Text size="sm" color="dimmed"> Data:</Text>
+          <Text size="sm" color="dimmed"> Componente Curricular:</Text>
+          <Text size="sm" color="dimmed"> Disciplina:</Text>
+          <Text size="sm" color="dimmed"> Período:</Text>
           <Text size="sm" color="dimmed"> Horário:</Text>
           <Text size="sm" color="dimmed"> Descrição:</Text>
           <Text size="sm" color="dimmed"> Inscritos:</Text>

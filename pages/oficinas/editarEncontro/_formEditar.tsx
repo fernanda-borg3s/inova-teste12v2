@@ -1,11 +1,8 @@
 import { Container, Text, Button, Modal, Input, Flex, Textarea, TextInput, Select, Group, NumberInput } from '@mantine/core';
-import { IconEdit, IconTrashX, IconClock, IconPlus } from '@tabler/icons-react';
-import { useDisclosure } from '@mantine/hooks';
-import style from './oficina.module.css';
-// import NovaOficina from '../components/newoficina';
+import { IconClock, IconPlus } from '@tabler/icons-react';
 import { DateInput, TimeInput } from '@mantine/dates';
-import RadioInputs from './novoEncontro/__inputRadio';
-import SelectOptions from './novoEncontro/__selectOptions';
+import RadioInputs from '../novoEncontro/__inputRadio';
+import SelectOptions from '../novoEncontro/__selectOptions';
 
 const groups = [
     {
@@ -85,33 +82,45 @@ const groups = [
       ],
     },
   ];
-export default function TabelaDetails(){
-    const [opened, { open, close }] = useDisclosure(false);
+export default function FormEditar(){
+
     return (
         <>
-        <Container className={style.containerDetails}>
-        <h3>Título do Encontro</h3>
-        <Text>Data da Criação: <strong className={style.span}>DD/MM/AAAA</strong></Text>
-        <div className={style.details}>Componente Curricular:</div>
-        <div className={style.componenteCurricular}>
-            <Text>Disciplina: <span className={style.span}>Biologia</span></Text>
-            <Text>Professor(a): <span className={style.span}>0000</span></Text>
-        </div>
-        <div className={style.details}>Detalhes:</div>
-       
-        <Text>Período: <strong className={style.span}>DD/MM/AAAA</strong> até <strong className={style.span}>DD/MM/AAAA</strong></Text>
-        <Text>Horários: <strong className={style.span}>Segundas-feira - 00:00 às 00:00</strong></Text>
-        <Text>Número de Encontros: <strong className={style.span}>2</strong></Text>
-        <Text>Sala: <strong className={style.span}>Lorem ipsum dolor sit amet</strong></Text>
-        <Textarea defaultValue={"text text text"} label="Descrição:"/>
-        <Textarea defaultValue={"text text text"} label="Componente Curricular:"/>
-        {/* <div className={style.btnContainer}> */}
-        <Flex mih={50} gap="md" justify="center" align="center" wrap="wrap"  className={style.btnContainer}>
-            <Button className={style.btnEditarDetails} component='a' href="oficinas/editarEncontro"><IconEdit size={20}></IconEdit>Editar</Button>
-          
-            <Button className={style.btnRemoveDetails}><IconTrashX size={20}></IconTrashX>Remover</Button>
-        {/* </div> */}
-        </Flex>
+        <Container >
+        
+        <Text>Prencha os campos corretamente</Text>
+        <form >
+          <SelectOptions groups={groups} />
+            <Input.Wrapper id="input-demo" label="Nome do Professor(a):">
+                <Input id="input-demo" value={"dados do banco"} />
+            </Input.Wrapper>
+            <Input.Wrapper id="input-demo" label="Nome da oficina:">
+                <Input id="input-demo"  value={"dados do banco"} />
+            </Input.Wrapper>
+            <Text>Informar horário da semana</Text>
+            <Flex mih={80}  gap="lg"  align="Flex-start" justify="Flex-start" direction="row"  wrap="wrap" >
+            <TimeInput label="Horário de Início" withAsterisk icon={<IconClock size="1rem" stroke={1.5} />} maw={300} mx="auto" />
+            <TimeInput label="Horário de Términio" withAsterisk icon={<IconClock size="1rem" stroke={1.5} />} maw={300} mx="auto" />
+            <DateInput valueFormat="DD/MM/YYYY" label="Data"  withAsterisk placeholder="Selecione a Data" maw={400} mx="auto"/>
+            </Flex>
+            <Group position="right">
+              {/* analisar como fazer abrir as opções de cima para adicionar outros horarios */}
+              <Button color="gray" >
+                  <IconPlus size="1rem" stroke={1.5}> </IconPlus>
+                  Adicionar Horário 
+              </Button>
+            </Group>
+            {/* <RadioInputs/> */}
+            <Textarea defaultValue={"dados do banco"} label="Descrição:" withAsterisk/>
+            <Textarea defaultValue={"dados do banco"}  label="Objetivos de aprendizagem:" withAsterisk/>
+            <Textarea defaultValue={"dados do banco"}   label="Sala:" withAsterisk/>
+            <NumberInput defaultValue={30} placeholder="Qtd" label="Quantidade de Vagas:" withAsterisk/>
+            <Flex mih={80}  gap="xl" justify="center" align="center" direction="row" >
+            <Button style={{background:'#004d2a', width:'150px'}}>Salvar</Button>
+            <Button style={{background:'#CD191E', width:'150px'}}>Cancelar</Button>
+            </Flex>
+        </form>
+      
         </Container>
         </>
     )

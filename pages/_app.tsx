@@ -11,20 +11,18 @@ export default function App(props: AppProps) {
       <Head>
         <title>Inova IF</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta charSet="utf-8" />
       </Head>
 
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{
-          /** Put your mantine theme override here */
-          colorScheme: 'light',
-        }}
+     
       >
-        <Layout>
+        
         <Component {...pageProps} />
 
-        </Layout>
+        
       </MantineProvider>
     </>
   );
